@@ -1,0 +1,79 @@
+.nav {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #0b668a;
+  background: -moz-linear-gradient(
+    90deg,
+    rgb(11, 102, 138) 0%,
+    rgba(70, 109, 147, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    90deg,
+    rgb(11, 102, 138) 0%,
+    rgba(70, 109, 147, 1) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgb(11, 102, 138) 0%,
+    rgba(70, 109, 147, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8a0b0b",endColorstr="#c51111",GradientType=1);
+  font-size: var(--step-0);
+  width: 100%;
+  height: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+.nav * {
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.logo {
+  width: min(160px, 20vw);
+  max-width: 160px;
+  height: 100%;
+}
+
+.linksContainer {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  gap: clamp(0.55rem, 0.44rem + 2vw, 5.56rem);
+  align-items: center;
+  justify-content: center;
+}
+.link {
+  transition: all 0.25s ease-in-out;
+}
+
+.link:hover,
+.link:focus-visible {
+  transform: translateY(-0.35rem);
+  color: white;
+}
+
+.carrito {
+  position: relative;
+}
+
+.cantidadEnCarrito {
+  position: absolute;
+  top: 0;
+  right: -1.5rem;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  font-size: var(--step--2);
+  color: #77eaff;
+  border-radius: 25%;
+  border: 1px solid #77eaff;
+}

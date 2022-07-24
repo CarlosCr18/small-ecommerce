@@ -1,0 +1,16 @@
+.listadoDeCarrito {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.controles {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  gap: min(1vw, 3rem);
+  transform: translateY(-3.5rem);
+}
