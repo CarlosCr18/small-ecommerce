@@ -56,7 +56,7 @@ const ListaDeOrdenes = () => {
 				<h1>
 					<br />
 				</h1>
-				<h1>We are searching your past orders</h1>
+				<h3>We are searching your past orders</h3>
 				<p className={styles.subTotal}>It will not take long</p>
 				<Link to={"/"}>
 					<button className={styles.btnIrAProductos}>Ir a productos</button>

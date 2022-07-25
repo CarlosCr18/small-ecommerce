@@ -11,6 +11,13 @@ const Productos = () => {
 		}
 	);
 	console.log({ data, error, isLoading, isFetching });
+	if (error) {
+		return (
+			<div className={styles.productosContainer}>
+				<h1>There was an error fetching</h1>
+			</div>
+		);
+	}
 	if (!isFetching) {
 		return (
 			<div className={styles.productosContainer}>

@@ -8,7 +8,10 @@ import {
 import QuantitySelector from "../../../reusableComponents/quantitySelector/quantitySelector.js";
 
 const TarjetaDeProducto = ({ arrayDeProducto, styles }) => {
-	const enCarrito = useSelector(cartArray).map((element) => element.product_id);
+	const enCarrito = useSelector(cartArray).map((element) => {
+		return { product_id: element.product_id, qty: element.qty };
+	});
+	const IDsEnCarrito = enCarrito.map((el) => el.product_id);
 	const dispatch = useDispatch();
 	const [saberMas, setSaberMas] = useState(false);
 	const [cantidad, setCantidad] = useState(0);
@@ -29,7 +32,7 @@ const TarjetaDeProducto = ({ arrayDeProducto, styles }) => {
 	};
 	let clasesDeButtonDeCarrito = styles.addToCartButton;
 	let opcionesDeBotonDeCarrito = "Agregar al carrito";
-	if (enCarrito.includes(id)) {
+	if (IDsEnCarrito.includes(id)) {
 		if (cantidad === 0) {
 			clasesDeButtonDeCarrito = `${styles.addToCartButton} ${styles.eliminarDelCarritoBackground}`;
 			opcionesDeBotonDeCarrito = "Eliminar del carrito";
@@ -52,7 +55,7 @@ const TarjetaDeProducto = ({ arrayDeProducto, styles }) => {
 				}
 				id={"dialogMensaje" + id}
 			>
-				{(cantidad === 0 && !enCarrito.includes(id)) || isNaN(cantidad)
+				{(cantidad === 0 && !IDsEnCarrito.includes(id)) || isNaN(cantidad)
 					? "Ingrese un numero valido"
 					: "se actualizo el carrito"}
 			</dialog>
@@ -87,45 +90,72 @@ const TarjetaDeProducto = ({ arrayDeProducto, styles }) => {
 					</s>
 				</span>
 			</div>
-			<div className={styles.AddToCartButtons}>
-				<QuantitySelector
-					quantity={cantidad}
-					setQuantity={setCantidad}
-					maxValue={arrayDeProducto.sale_count}
-				/>
+			{arrayDeProducto.sale_count > 0 ? (
+				<div className={styles.AddToCartButtons}>
+					<QuantitySelector
+						quantity={cantidad}
+						setQuantity={setCantidad}
+						maxValue={arrayDeProducto.sale_count}
+					/>
 
-				<button
-					aria-label="Agregar al carrito"
-					className={clasesDeButtonDeCarrito}
-					onClick={() => {
-						mostrarMensajeDeAlerta();
-						if (isNaN(cantidad)) {
-							return;
-						}
-						if (cantidad === 0) {
-							if (enCarrito.includes(id)) {
-								dispatch(deleteItem({ product_id: id }));
+					<button
+						aria-label="Agregar al carrito"
+						className={clasesDeButtonDeCarrito}
+						onClick={() => {
+							mostrarMensajeDeAlerta();
+							if (isNaN(cantidad)) {
+								return;
 							}
-							return;
-						} else {
-							dispatch(
-								addItem({
-									product_id: id,
-									qty: cantidad,
-									title: arrayDeProducto["title"],
-									image_url: arrayDeProducto["image_url"],
-									price: arrayDeProducto.price,
-									short_description: arrayDeProducto["short_description"],
-									sale_count: arrayDeProducto["sale_count"],
-									discount: arrayDeProducto.discount,
-								})
-							);
-						}
-					}}
-				>
-					{opcionesDeBotonDeCarrito}
-				</button>
-			</div>
+							if (cantidad === 0) {
+								if (IDsEnCarrito.includes(id)) {
+									dispatch(deleteItem({ product_id: id }));
+								}
+								return;
+							} else {
+								dispatch(
+									addItem({
+										product_id: id,
+										qty: cantidad,
+										title: arrayDeProducto["title"],
+										image_url: arrayDeProducto["image_url"],
+										price: arrayDeProducto.price,
+										short_description: arrayDeProducto["short_description"],
+										sale_count: arrayDeProducto["sale_count"],
+										discount: arrayDeProducto.discount,
+									})
+								);
+							}
+						}}
+					>
+						{opcionesDeBotonDeCarrito}
+					</button>
+
+					<p className={styles.enCarrito}>
+						{enCarrito
+							.map((el) => {
+								if (el.product_id === id) {
+									return el.qty;
+								}
+								return "";
+							})
+							.join("")
+							.trim()
+							? " Items like this in your cart: " +
+							  enCarrito
+									.map((el) => {
+										if (el.product_id === id) {
+											return el.qty;
+										}
+										return "";
+									})
+									.join("")
+									.trim()
+							: null}
+					</p>
+				</div>
+			) : (
+				<h2>Sold out</h2>
+			)}
 		</div>
 	);
 };

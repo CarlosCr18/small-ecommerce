@@ -67,7 +67,10 @@ const OrdenForm = ({ product_list, ocultarForm, useDispatch, clearItems }) => {
 							<input
 								id={field}
 								name={field}
-								type="text"
+								type={"text"}
+								maxlength={
+									field === "phone" ? "15" : field === "zip_code" ? "5" : "20"
+								}
 								value={data.field}
 								placeholder={field}
 								className={styles.form__field}
