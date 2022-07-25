@@ -15,11 +15,11 @@ export const cartSlice = createSlice({
 			// immutable state based off those changes
 			if (
 				state.value.filter(
-					(value) => value.product_id == action.payload.product_id
+					(value) => value.product_id === action.payload.product_id
 				).length > 0
 			) {
 				state.value = state.value.map((value) => {
-					if (value.product_id == action.payload.product_id) {
+					if (value.product_id === action.payload.product_id) {
 						return action.payload;
 					}
 					return value;
