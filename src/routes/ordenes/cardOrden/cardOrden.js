@@ -2,7 +2,6 @@ import React from "react";
 import OrderDetals from "../../../reusableComponents/orderDetails/orderDetails";
 
 const CardOrden = ({ orden, styles, detallesDeOrden = [] }) => {
-	console.log({ detallesDeOrden });
 	return (
 		<div className={styles.cardOrdenContainer}>
 			<h3>Recibo de Orden</h3>

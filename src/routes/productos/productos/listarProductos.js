@@ -4,13 +4,12 @@ import styles from "./productos.module.css";
 import { api } from "../../../storeReducers/apiSlice/apiSlice";
 
 const Productos = () => {
-	const { data, error, isLoading, isFetching } = api.useGetListQuery(
+	const { data, error, isFetching } = api.useGetListQuery(
 		{},
 		{
 			refetchOnMountOrArgChange: true,
 		}
 	);
-	console.log({ data, error, isLoading, isFetching });
 	if (error) {
 		return (
 			<div className={styles.productosContainer}>

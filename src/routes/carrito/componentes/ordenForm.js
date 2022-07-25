@@ -8,7 +8,6 @@ const OrdenForm = ({ product_list, ocultarForm, useDispatch, clearItems }) => {
 	const navigate = useNavigate();
 	const reducer = (state, action) => {
 		const { name, value } = action.target;
-		console.log(name, value, action.target);
 		return { ...state, [name]: value };
 	};
 	const initialState = {
