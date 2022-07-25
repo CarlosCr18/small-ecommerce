@@ -33,7 +33,8 @@ const QuantitySelector = ({
 				setQuantity(localQuantity, index);
 			}
 		}
-	}, [localQuantity, index, maxValue, minValue, setQuantity]);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [localQuantity]);
 
 	return (
 		<div className={styles.quantitySelectorContainer}>

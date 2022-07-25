@@ -67,7 +67,7 @@ const OrdenForm = ({ product_list, ocultarForm, useDispatch, clearItems }) => {
 								id={field}
 								name={field}
 								type={"text"}
-								maxlength={
+								maxLength={
 									field === "phone" ? "15" : field === "zip_code" ? "5" : "20"
 								}
 								value={data.field}
