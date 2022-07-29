@@ -43,7 +43,7 @@ const ListaDeOrdenes = () => {
 				</h1>
 				<h1>There was an error processing your request</h1>
 				<Link to={"/"}>
-					<button className={styles.btnIrAProductos}>Ir a productos</button>
+					<button className={styles.btnIrAProductos}>Go to products</button>
 				</Link>
 			</div>
 		);
@@ -59,7 +59,7 @@ const ListaDeOrdenes = () => {
 				<h3>We are searching your past orders</h3>
 				<p className={styles.subTotal}>It will not take long</p>
 				<Link to={"/"}>
-					<button className={styles.btnIrAProductos}>Ir a productos</button>
+					<button className={styles.btnIrAProductos}>Go to products</button>
 				</Link>
 			</div>
 		);
@@ -72,12 +72,12 @@ const ListaDeOrdenes = () => {
 				<h1>
 					<br />
 				</h1>
-				<h1>Tu lista de ordenes esta vacia</h1>
+				<h1>Your order history is empty</h1>
 				<p className={styles.subTotal}>
-					Mira la seccion de productos y agrega algo a tu carrito
+					Take a look at the products list and add something to your cart
 				</p>
 				<Link to={"/"}>
-					<button className={styles.btnIrAProductos}>Ir a productos</button>
+					<button className={styles.btnIrAProductos}>Go to products</button>
 				</Link>
 			</div>
 		);
@@ -88,9 +88,9 @@ const ListaDeOrdenes = () => {
 			<NavBar />
 			{!buscandoListaDeOrdenes ? (
 				<div className={styles.ordenActual}>
-					<h1>Lista de Ordenes</h1>
+					<h1>Orders history</h1>
 					<div className={styles.controlDeOrden}>
-						<h2>Numero de Orden</h2>
+						<h2>Order number</h2>
 						<div className={styles.numeroDeOrden}>
 							{numeroDeOrden > 0 && (
 								<button
@@ -116,7 +116,7 @@ const ListaDeOrdenes = () => {
 						</div>
 					</div>
 
-					<h2>Articulos en la orden</h2>
+					<h2>Order's products</h2>
 					<CardOrden
 						orden={listaDeOrdenes.response[numeroDeOrden]}
 						styles={styles}
@@ -133,12 +133,12 @@ const ListaDeOrdenes = () => {
 								// setBuscandoDetalles(true);
 							}}
 						>
-							Mostrar mas detalles
+							Show more details
 						</button>
 					)}
 				</div>
 			) : (
-				<h2>Cargando ordenes...</h2>
+				<h2>Loading orders...</h2>
 			)}
 		</div>
 	);

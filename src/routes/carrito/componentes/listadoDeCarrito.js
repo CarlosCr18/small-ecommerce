@@ -66,7 +66,7 @@ const ListadoDeCarrito = ({
 									dispatch(deleteItem({ product_id: element.product_id }));
 								}}
 							>
-								Eliminar
+								Delete
 							</button>
 						</div>
 					</div>

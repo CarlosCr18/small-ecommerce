@@ -64,7 +64,7 @@ const QuantitySelector = ({
 				</button>
 			</div>
 			{mostrarDisponibles && (
-				<p className={styles.availablesDescription}>Disponibles: {maxValue}</p>
+				<p className={styles.availablesDescription}>Available: {maxValue}</p>
 			)}
 		</div>
 	);

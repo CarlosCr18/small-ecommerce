@@ -4,22 +4,22 @@ import OrderDetals from "../../../reusableComponents/orderDetails/orderDetails";
 const CardOrden = ({ orden, styles, detallesDeOrden = [] }) => {
 	return (
 		<div className={styles.cardOrdenContainer}>
-			<h3>Recibo de Orden</h3>
+			<h3>Order receipt</h3>
 			<div className={styles.gridContainer}>
 				<div className={styles.gridElementWelcome}>
-					Hola usuario <strong>{orden.user_id}</strong> esta es tu orden id:{" "}
+					Hello user <strong>{orden.user_id}</strong>. This is your order ID:{" "}
 					<strong>{orden.id}</strong>
 				</div>
 				<hr></hr>
 				<div className={styles.gridElementInfo}>
 					<div className={styles.gridElement}>
-						<p>Fecha de Orden</p>
+						<p>Order's date</p>
 						<p>
 							<strong>{orden.last_update.split(" ")[0]}</strong>
 						</p>
 					</div>
 					<div className={styles.gridElement}>
-						<p>Numero de Orden</p>
+						<p>Order's number</p>
 						<p>
 							<strong>{orden.order_code}</strong>
 						</p>
@@ -38,7 +38,7 @@ const CardOrden = ({ orden, styles, detallesDeOrden = [] }) => {
 						</p>
 					</div>
 					<div className={styles.gridElement}>
-						<p>Descuento</p>
+						<p>Discount</p>
 						<p>
 							{" "}
 							<strong>
@@ -61,46 +61,46 @@ const CardOrden = ({ orden, styles, detallesDeOrden = [] }) => {
 					<hr></hr>
 
 					<div className={styles.gridElementInfo}>
-						<p>Los datos asociados con esta orden son:</p>
+						<p>User information:</p>
 						<div className={styles.gridElement}>
-							<p>Usuario</p>
+							<p>User</p>
 							<p>
 								<strong>{orden.user_id}</strong>
 							</p>
 						</div>
 						<div className={styles.gridElement}>
-							<p>telefono</p>
+							<p>Phone</p>
 							<p>
 								<strong>{orden.phone}</strong>
 							</p>
 						</div>
 						<div className={styles.gridElement}>
-							<p>Nombre de la calle</p>
+							<p>Street</p>
 							<p>
 								{" "}
 								<strong>{orden.street_name}</strong>
 							</p>
 						</div>
 						<div className={styles.gridElement}>
-							<p>Direccion</p>
+							<p>Address</p>
 							<p>
 								<strong>{orden.address}</strong>
 							</p>
 						</div>
 						<div className={styles.gridElement}>
-							<p>ciudad</p>
+							<p>City</p>
 							<p>
 								<strong>{orden.city}</strong>
 							</p>
 						</div>
 						<div className={styles.gridElement}>
-							<p>estado</p>
+							<p>State</p>
 							<p>
 								<strong>{orden.state}</strong>
 							</p>
 						</div>
 						<div className={styles.gridElement}>
-							<p>Codigo postal</p>
+							<p>zip code</p>
 							<p>
 								<strong>{orden.zip_code}</strong>
 							</p>

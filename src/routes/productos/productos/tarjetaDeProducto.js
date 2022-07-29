@@ -31,18 +31,18 @@ const TarjetaDeProducto = ({ arrayDeProducto, styles }) => {
 		}, 1500);
 	};
 	let clasesDeButtonDeCarrito = styles.addToCartButton;
-	let opcionesDeBotonDeCarrito = "Agregar al carrito";
+	let opcionesDeBotonDeCarrito = "Add to cart";
 	if (IDsEnCarrito.includes(id)) {
 		if (cantidad === 0) {
 			clasesDeButtonDeCarrito = `${styles.addToCartButton} ${styles.eliminarDelCarritoBackground}`;
-			opcionesDeBotonDeCarrito = "Eliminar del carrito";
+			opcionesDeBotonDeCarrito = "Delete from cart";
 		} else {
-			opcionesDeBotonDeCarrito = "Actualizar el carrito";
+			opcionesDeBotonDeCarrito = "Update cart";
 			clasesDeButtonDeCarrito = `${styles.addToCartButton} ${styles.actualizarCarritoBackground}`;
 		}
 	} else {
 		clasesDeButtonDeCarrito = `${styles.addToCartButton} ${styles.agregarAlCarritoBackground}`;
-		opcionesDeBotonDeCarrito = "Agregar al carrito";
+		opcionesDeBotonDeCarrito = "Add to cart";
 	}
 
 	return (
@@ -56,8 +56,8 @@ const TarjetaDeProducto = ({ arrayDeProducto, styles }) => {
 				id={"dialogMensaje" + id}
 			>
 				{(cantidad === 0 && !IDsEnCarrito.includes(id)) || isNaN(cantidad)
-					? "Ingrese un numero valido"
-					: "se actualizo el carrito"}
+					? "Enter a valid number"
+					: "Cart updated"}
 			</dialog>
 			<img
 				loading="lazy"
@@ -72,7 +72,7 @@ const TarjetaDeProducto = ({ arrayDeProducto, styles }) => {
 					setSaberMas(!saberMas);
 				}}
 			>
-				{saberMas ? "--Saber menos--" : "--Saber mas--"}
+				{saberMas ? "--Show less--" : "--Show more--"}
 			</button>
 
 			<div className={styles.cardPrice}>
@@ -81,7 +81,7 @@ const TarjetaDeProducto = ({ arrayDeProducto, styles }) => {
 					.toString()
 					.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
 				<span className={styles.cardLastPrice}>
-					Precio anterior{" "}
+					Previous price{" "}
 					<s>
 						$
 						{arrayDeProducto.price

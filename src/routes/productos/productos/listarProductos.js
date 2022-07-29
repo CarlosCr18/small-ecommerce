@@ -30,7 +30,13 @@ const Productos = () => {
 			</div>
 		);
 	}
-	return <div className="spinner"></div>;
+	return (
+		<div className={styles.subTotalContainer}>
+			<h1>
+				We are looking for products, give us a minute to wake up the server.
+			</h1>
+		</div>
+	);
 };
 
 export default Productos;

@@ -33,7 +33,7 @@ const OrdenForm = ({ product_list, ocultarForm, useDispatch, clearItems }) => {
 	if (isSuccess) {
 		return (
 			<div className={styles.dialogContainer}>
-				<h2>Se ha creado la orden con exito!</h2>
+				<h2>The order was created successfully!</h2>
 				<button
 					className={`${styles.btn} ${styles.btnCrearOrden}`}
 					onClick={() => {
@@ -42,7 +42,7 @@ const OrdenForm = ({ product_list, ocultarForm, useDispatch, clearItems }) => {
 						navigate("/ordenes");
 					}}
 				>
-					Regresar
+					Close
 				</button>
 			</div>
 		);
@@ -51,9 +51,9 @@ const OrdenForm = ({ product_list, ocultarForm, useDispatch, clearItems }) => {
 	return (
 		<div className={styles.dialogContainer}>
 			<form className={styles.form} onSubmit={handleSubmit}>
-				<h2 className={styles.title}>Completar orden</h2>
+				<h2 className={styles.title}>Create order</h2>
 				<p className={styles.text}>
-					Ya casi esta todo listo! <br></br> Solamente requerimos unos datos mas
+					Almost ready! <br></br> We just need some more information
 				</p>
 
 				{Object.keys(initialState).map((field, index) => {
@@ -92,20 +92,20 @@ const OrdenForm = ({ product_list, ocultarForm, useDispatch, clearItems }) => {
 								type="submit"
 								className={`${styles.btn} ${styles.btnCrearOrden}`}
 							>
-								Crear orden
+								Create order
 							</button>
 							<button
 								type="button"
 								className={`${styles.btn} ${styles.btnRegresar}`}
 								onClick={() => ocultarForm()}
 							>
-								Regresar
+								Go back
 							</button>
 						</>
 					)}
 					{enviandoData && (
 						<>
-							<p className={styles.Enviando}>Enviando</p>
+							<p className={styles.Enviando}>Sending</p>
 						</>
 					)}
 				</div>
