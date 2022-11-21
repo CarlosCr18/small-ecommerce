@@ -1,129 +1,129 @@
 :root {
-	--step--2: clamp(0.91rem, 0.89rem + 0.1vw, 0.96rem);
-	--step--1: clamp(1.09rem, 1.05rem + 0.21vw, 1.2rem);
-	--step-0: clamp(1.31rem, 1.24rem + 0.37vw, 1.5rem);
-	--step-1: clamp(1.58rem, 1.46rem + 0.59vw, 1.88rem);
-	--step-2: clamp(1.89rem, 1.71rem + 0.89vw, 2.34rem);
-	--step-3: clamp(2.27rem, 2.01rem + 1.29vw, 2.93rem);
-	--step-4: clamp(2.72rem, 2.36rem + 1.83vw, 3.66rem);
-	--step-5: clamp(3.27rem, 2.75rem + 2.56vw, 4.58rem);
-	--step-6: clamp(3.92rem, 3.22rem + 3.52vw, 5.72rem);
-	--step-7: clamp(4.7rem, 3.75rem + 4.78vw, 7.15rem);
-	--step-8: clamp(5.64rem, 4.36rem + 6.43vw, 8.94rem);
+  --step--2: clamp(0.91rem, 0.89rem + 0.1vw, 0.96rem);
+  --step--1: clamp(1.09rem, 1.05rem + 0.21vw, 1.2rem);
+  --step-0: clamp(1.31rem, 1.24rem + 0.37vw, 1.5rem);
+  --step-1: clamp(1.58rem, 1.46rem + 0.59vw, 1.88rem);
+  --step-2: clamp(1.89rem, 1.71rem + 0.89vw, 2.34rem);
+  --step-3: clamp(2.27rem, 2.01rem + 1.29vw, 2.93rem);
+  --step-4: clamp(2.72rem, 2.36rem + 1.83vw, 3.66rem);
+  --step-5: clamp(3.27rem, 2.75rem + 2.56vw, 4.58rem);
+  --step-6: clamp(3.92rem, 3.22rem + 3.52vw, 5.72rem);
+  --step-7: clamp(4.7rem, 3.75rem + 4.78vw, 7.15rem);
+  --step-8: clamp(5.64rem, 4.36rem + 6.43vw, 8.94rem);
 }
 
 .productosContainer {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	width: auto;
-	margin: 0 auto;
-	margin-block: 2rem;
-	gap: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: auto;
+  margin: 0 auto;
+  margin-block: 2rem;
+  gap: 1.5rem;
 }
 
 .cardContainer {
-	position: relative;
-	width: min(90%, 20rem);
-	height: 44rem;
-	align-items: center;
-	justify-content: space-evenly;
-	display: flex;
-	flex-direction: column;
-	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-	padding: 2rem 1rem;
+  position: relative;
+  width: min(90%, 20rem);
+  height: 44rem;
+  align-items: center;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 2rem 1rem;
 }
 
 .cardContainer img {
-	width: min(90%, 20rem);
-	max-height: 15rem;
-	object-fit: contain;
+  width: min(90%, 20rem);
+  max-height: 15rem;
+  object-fit: contain;
 }
 
 .cardTitle {
-	font-size: var(--step-1);
-	font-weight: bold;
+  font-size: var(--step-1);
+  font-weight: bold;
 }
 
 .cardDescription {
-	font-size: var(--step--2);
-	gap: 0.25rem;
-	max-height: 16rem;
-	padding-block: 1rem;
-	display: flex;
-	flex-direction: column;
-	white-space: pre-line;
-	overflow: auto;
-	text-align: left;
+  font-size: var(--step--2);
+  gap: 0.25rem;
+  max-height: 16rem;
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  white-space: pre-line;
+  overflow: auto;
+  text-align: left;
 }
 
 .btnSaberMas {
-	max-width: auto;
-	background-color: transparent;
-	border: none;
-	outline: none;
-	font-size: var(--step--2);
-	color: rgb(47, 142, 224);
+  max-width: auto;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: var(--step--2);
+  color: rgb(47, 142, 224);
 }
 
 .cardPrice {
-	display: flex;
-	flex-direction: column;
-	font-size: var(--step-2);
-	color: rgb(168, 14, 14);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--step-2);
+  color: rgb(168, 14, 14);
 }
 
 .cardLastPrice {
-	font-size: var(--step--2);
-	color: rgb(20, 20, 20);
-	margin-bottom: 1rem;
+  font-size: var(--step--2);
+  color: rgb(20, 20, 20);
+  margin-bottom: 1rem;
 }
 
 .addToCartButton {
-	width: auto;
-	padding: 12px 16px;
-	font-size: var(--step--1);
-	border-radius: 5px;
-	margin-top: 1rem;
-	border: none;
-	color: rgb(243, 243, 243);
+  width: auto;
+  padding: 12px 16px;
+  font-size: var(--step--1);
+  border-radius: 5px;
+  margin-top: 1rem;
+  border: none;
+  color: rgb(241, 241, 241);
 }
 
 .eliminarDelCarritoBackground {
-	background-color: rgb(185, 48, 48);
+  background-color: rgb(185, 48, 48);
 }
 
 .actualizarCarritoBackground {
-	background-color: rgb(47, 151, 61);
+  background-color: rgb(12, 180, 34);
 }
 .agregarAlCarritoBackground {
-	background-color: rgb(47, 127, 151);
+  background-color: #1c86d6;
 }
 
 .dialogMensaje {
-	position: fixed;
-	bottom: 5rem;
-	left: 0;
-	right: 0;
-	color: white;
-	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-	transition: all 0.35s;
+  position: fixed;
+  bottom: 5rem;
+  left: 0;
+  right: 0;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.35s;
 }
 
 .enCarrito {
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	opacity: 0.7;
-	transform: translateX(-50%) translateY(25%);
-	white-space: nowrap;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  opacity: 0.7;
+  transform: translateX(-50%) translateY(25%);
+  white-space: nowrap;
 }
 
 .subTotalContainer {
-	padding: 2rem;
-	font-size: var(--step-1);
-	text-align: center;
-	width: 75%;
-	margin: 2rem auto;
+  padding: 2rem;
+  font-size: var(--step-1);
+  text-align: center;
+  width: 75%;
+  margin: 2rem auto;
 }

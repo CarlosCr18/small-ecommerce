@@ -3,28 +3,15 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: #0b668a;
-  background: -moz-linear-gradient(
-    90deg,
-    rgb(11, 102, 138) 0%,
-    rgba(70, 109, 147, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    90deg,
-    rgb(11, 102, 138) 0%,
-    rgba(70, 109, 147, 1) 100%
-  );
-  background: linear-gradient(
-    90deg,
-    rgb(11, 102, 138) 0%,
-    rgba(70, 109, 147, 1) 100%
-  );
+  background: #0c92c7;
+  background: -moz-linear-gradient(90deg, rgb(15, 140, 189) 0%, rgb(71, 136, 201) 100%);
+  background: -webkit-linear-gradient(90deg, rgb(15, 140, 189) 0%, rgb(71, 136, 201) 100%);
+  background: linear-gradient(90deg, rgb(15, 140, 189) 0%, rgb(71, 136, 201) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#8a0b0b",endColorstr="#c51111",GradientType=1);
   font-size: var(--step-0);
   width: 100%;
   height: 3rem;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .nav * {
@@ -54,18 +41,20 @@
 
 .link:hover,
 .link:focus-visible {
-  transform: translateY(-0.35rem);
+  transform: translateY(-0.15rem);
   color: white;
 }
 
 .carrito {
   position: relative;
+  display: flex;
+  gap: 0.25rem;
 }
 
 .cantidadEnCarrito {
   position: absolute;
-  top: 0;
-  right: -1.5rem;
+  top: -0.5rem;
+  right: -0.25rem;
   text-align: center;
   display: grid;
   place-content: center;
@@ -73,7 +62,9 @@
   width: 20px;
   height: 20px;
   font-size: var(--step--2);
-  color: #77eaff;
-  border-radius: 25%;
-  border: 1px solid #77eaff;
+  color: #ffca2a;
+}
+
+.cartIcon {
+  font-size: var(--step--2);
 }

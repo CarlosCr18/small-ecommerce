@@ -25,7 +25,8 @@
   margin-bottom: 1rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border: none;
-  background-color: rgb(245, 222, 14);
+  background-color: #1c86d6;
+  color: rgb(241, 241, 241);
 }
 
 .btnIrAProductos {
@@ -36,5 +37,14 @@
   margin-bottom: 1rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   border: none;
-  background-color: rgb(245, 222, 14);
+  background-color: rgb(230, 209, 21);
+  color: rgb(14, 31, 48);
+}
+.ordenDialog {
+  place-content: center;
+  place-items: center;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 0px 15px 0.2rem rgba(0, 0, 0, 0.25);
+  position: relative;
 }

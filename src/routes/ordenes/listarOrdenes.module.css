@@ -1,75 +1,76 @@
 .listaDeOrdenesContainer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
 }
 
 .subTotalContainer {
-	font-size: var(--step-1);
-	text-align: center;
+  font-size: var(--step-1);
+  text-align: center;
 }
 .subTotal {
-	margin: 0;
-	padding: 0.25rem;
+  margin: 0;
+  padding: 0.25rem;
 }
 .btnIrAProductos {
-	margin-top: 5rem;
-	padding: 1rem 1.55rem;
-	font-size: var(--step--1);
-	border-radius: 10px;
-	margin-bottom: 1rem;
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-	border: none;
-	background-color: rgb(245, 222, 14);
+  margin-top: 5rem;
+  padding: 1rem 1.55rem;
+  font-size: var(--step--1);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: none;
+  background-color: rgb(245, 222, 14);
 }
 
 .ordenActual {
-	padding-top: 2rem;
-	text-align: center;
+  padding-top: 2rem;
+  text-align: center;
 }
 
 .controlDeOrden {
-	padding: 1rem 0 2rem 0;
+  padding: 1rem 0 2rem 0;
 }
 
 .cardOrdenContainer {
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	text-align: left;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 .gridContainer {
-	padding-bottom: 3rem;
+  padding-bottom: 3rem;
 }
 
 .gridElement {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 hr {
-	margin-block: 2rem;
+  margin-block: 2rem;
 }
 
 .btnMostrarMasDetalles {
-	padding: 1rem 1.55rem;
-	font-size: var(--step--1);
-	border-radius: 10px;
-	margin-bottom: 1rem;
-	box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-	border: none;
-	background-color: rgb(245, 222, 14);
+  padding: 1rem 1.55rem;
+  font-size: var(--step--1);
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: none;
+  background-color: #1c86d6;
+  color: rgb(241, 241, 241);
 }
 .numeroDeOrden {
-	display: flex;
-	flex-direction: row;
-	gap: 1rem;
-	place-content: center;
-	place-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  place-content: center;
+  place-items: center;
 }

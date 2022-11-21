@@ -1,19 +1,31 @@
 .dialogContainer {
   display: grid;
-  place-content: center;
   place-items: center;
+  place-content: center;
+  padding: 1rem;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  padding: 2rem 1rem;
+  padding: 0rem 1rem;
+  font-size: var(--step--1);
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: var(--step-3);
+  text-align: center;
+}
+.text {
+  margin-bottom: 2rem;
   font-size: var(--step--1);
 }
 .form__group {
   position: relative;
   padding: 15px 0 0;
-  margin-block: 0.5rem;
+  margin-block: 0.3rem;
   width: 100%;
 }
 
@@ -24,7 +36,7 @@
   border-bottom: 1px solid gray;
   outline: 0;
   color: black;
-  padding: 0.5rem 1rem;
+  padding: 0.45rem 1rem;
   background: transparent;
   transition: border-color 0.2s;
 }
@@ -33,7 +45,7 @@
 }
 
 .form__field:placeholder-shown ~ .form__label {
-  font-size: var(--step-0);
+  font-size: var(--step--2);
   cursor: text;
   top: 20px;
 }
@@ -42,6 +54,7 @@
   top: 0;
   left: 2%;
   display: block;
+  font-size: var(--step--2);
   transition: 0.2s;
   color: rgb(30, 89, 138);
 }
@@ -50,7 +63,7 @@
   padding-bottom: 6px;
   border: none;
   border-bottom: 2px solid gray;
-  font-weight: 600;
+  font-weight: 500;
   border-width: 3px;
   border-image: linear-gradient(to right, rgb(63, 143, 209), rgb(30, 89, 138));
   border-image-slice: 1;
@@ -62,18 +75,13 @@
   display: block;
   transition: 0.2s;
   color: rgb(34, 120, 146);
-  font-weight: 700;
+  font-weight: 500;
 }
 .form__field,
 .form__field:required,
 .form__field:invalid {
   box-shadow: none;
-}
-.title {
-  font-size: var(--step-2);
-}
-.text {
-  margin-bottom: 1rem;
+  font-size: var(--step--1);
 }
 
 .btnsContainer {
@@ -91,8 +99,8 @@
   font-size: var(--step--1);
   border: 0;
   border-radius: 10px;
-  opacity: 0.8;
-  outline: 1px solid rgb(43, 43, 43);
+  opacity: 0.9;
+  background-color: #fff;
 }
 
 .btn:hover,
@@ -102,6 +110,8 @@
 }
 
 .btnCrearOrden {
-  background-color: rgb(245, 222, 14);
+  background-color: #1c86d6;
+  color: rgb(241, 241, 241);
   font-weight: bold;
+  opacity: 1;
 }
